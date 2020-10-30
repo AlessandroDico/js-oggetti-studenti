@@ -13,9 +13,68 @@ var student = {
 };
 
 console.log(student);
+// console.log(student.name);
+// console.log(student['surname']);
+// console.log(student['age']);
 
 for (var key in student) {
     // console.log(key);
     // console.log(student[key]);
     console.log(key + ' : ' + student[key]);
-};
+}
+
+
+var students = [
+    {
+        'name' : 'pippo',
+        'surname' : 'verdi',
+        'age' : '20'
+    },
+    {
+        'name' : 'ciccio',
+        'surname' : 'bianchi',
+        'age' : '21'
+    },
+    {
+        'name' : 'mimmo',
+        'surname' : 'rossi',
+        'age' : '22'
+    },
+];
+
+//console.log(students.length);
+
+// questo è un array con all'interno degli oggetti
+// per ciclare l'array ci va un ciclo for
+// per ciclare gli oggetti ci va un ciclo for in
+
+
+for (var i = 0; i < students.length; i++) {
+    var elementoCorrente = students[i];
+    // console.log(students[i]);
+
+    for (var key in elementoCorrente) {
+    
+        if (key == 'name' || key == 'surname') {
+            console.log('studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key]);
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
