@@ -84,7 +84,7 @@ $(document).ready(function(){
 
             if (key == 'name' || key == 'surname') {
                 console.log('studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key]);
-                $('#first-student').append('<div>' + 'studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key] + '</div>');
+                $('main').append('<div>' + 'studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key] + '</div>');
             }
         }
     }
