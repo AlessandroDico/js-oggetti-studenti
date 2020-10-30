@@ -54,16 +54,36 @@ for (var i = 0; i < students.length; i++) {
     // console.log(students[i]);
 
     for (var key in elementoCorrente) {
-    
+
         if (key == 'name' || key == 'surname') {
             console.log('studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key]);
         }
     }
-
 }
 
+var newStudent = {
+    'name' : prompt('inserisci il tuo nome'),
+    'surname' : prompt('inserisci il tuo cognome'),
+    'age' : parseInt(prompt('inserisci la tua età')),
+};
+
+console.log(newStudent);
+
+students.push(newStudent);
+console.log(students);
 
 
+for (var i = 0; i < students.length; i++) {
+    var elementoCorrente = students[i];
+    // console.log(students[i]);
+
+    for (var key in elementoCorrente) {
+
+        if (key == 'name' || key == 'surname') {
+            console.log('studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key]);
+        }
+    }
+}
 
 
 
