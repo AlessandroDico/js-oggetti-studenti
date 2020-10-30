@@ -50,7 +50,7 @@ $(document).ready(function(){
     // per ciclare l'array ci va un ciclo for
     // per ciclare gli oggetti ci va un ciclo for in
 
-
+/*
     for (var i = 0; i < students.length; i++) {
         var elementoCorrente = students[i];
         // console.log(students[i]);
@@ -63,7 +63,7 @@ $(document).ready(function(){
             }
         }
     }
-
+*/
     var newStudent = {
         'name' : prompt('inserisci il tuo nome'),
         'surname' : prompt('inserisci il tuo cognome'),
@@ -84,6 +84,7 @@ $(document).ready(function(){
 
             if (key == 'name' || key == 'surname') {
                 console.log('studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key]);
+                $('#first-student').append('<div>' + 'studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key] + '</div>');
             }
         }
     }
