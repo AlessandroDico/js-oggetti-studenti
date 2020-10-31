@@ -64,10 +64,12 @@ $(document).ready(function(){
         }
     }
 */
+
+
     var newStudent = {
-        'name' : prompt('inserisci il tuo nome'),
-        'surname' : prompt('inserisci il tuo cognome'),
-        'age' : parseInt(prompt('inserisci la tua età')),
+        'name' : askName(),
+        'surname' : askSurame(),
+        'age' : askAge(),
     };
 
     console.log(newStudent);
@@ -87,6 +89,53 @@ $(document).ready(function(){
                 $('main').append('<div>' + 'studente ' + (i + 1) + ' ' + key + ' : ' + elementoCorrente[key] + '</div>');
             }
         }
+    }
+
+
+    function askName(){
+
+        do {
+            var resultName = prompt('inserisci il tuo nome');
+                if (!isNaN(resultName) || resultName.length <= 2) {
+                    alert('inserisci un nome valido');
+                }
+
+        } while (!isNaN(resultName) || resultName.length <= 2);
+
+        return resultName;
+    }
+
+    // PROVARE A FARE IL DO WHILE IN MODO DIFFERENTE
+
+    function askSurame(){
+
+        var condition = false;
+        do {
+            var resultSurame = prompt('inserisci il tuo cognome');
+                if (isNaN(resultSurame) && resultSurame.length >= 2) {
+                    condition = true;
+                } else {
+                    alert('inserisci un cognome valido');
+                }
+        } while (condition == false || !isNaN(resultSurame) || resultSurame.length < 2);
+
+
+        return resultSurame;
+    }
+
+
+    function askAge(){
+
+        do {
+            var resultAge = parseInt(prompt('inserisci la tua età'));
+            if (isNaN(resultAge) || resultAge < 18 || resultAge > 90) {
+                alert('valore non valido');
+            }
+
+        } while (isNaN(resultAge) || resultAge < 18 || resultAge > 90);
+
+        return resultAge;
+
     }
 
 
