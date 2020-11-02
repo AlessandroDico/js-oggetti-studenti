@@ -11,7 +11,7 @@ $(document).ready(function(){
     var student = {
         'name' : 'pippo',
         'surname' : 'verdi',
-        'age' : '20'
+        'age' : 20,
     };
 
     console.log(student);
@@ -30,17 +30,17 @@ $(document).ready(function(){
         {
             'name' : 'pippo',
             'surname' : 'verdi',
-            'age' : '20'
+            'age' : 20
         },
         {
             'name' : 'ciccio',
             'surname' : 'bianchi',
-            'age' : '21'
+            'age' : 21,
         },
         {
             'name' : 'mimmo',
             'surname' : 'rossi',
-            'age' : '22'
+            'age' : 22,
         },
     ];
 
